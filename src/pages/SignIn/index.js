@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Button, Gap, Header, TextInput} from '../../components';
 import {colors} from '../../utils';
 
-const SignIn = () => {
+const SignIn = props => {
   return (
     <View style={styles.ContainerSignIn}>
       <Header Headertitle="Sign In" Headerdesc="Find your best ever meal" />
@@ -14,7 +14,12 @@ const SignIn = () => {
         <Gap height={24} />
         <Button text="Login" />
         <Gap height={12} />
-        <Button color="#8D92A3" text="Create New Account" textColor="white" />
+        <Button
+          color="#8D92A3"
+          text="Create New Account"
+          textColor="white"
+          onPress={() => props.navigation.navigate('SignUp')}
+        />
       </View>
     </View>
   );
