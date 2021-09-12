@@ -6,10 +6,7 @@ const TextInput = props => {
   return (
     <View>
       <Text style={styles.label}>{props.Label}</Text>
-      <TextInputRN
-        style={styles.textInput}
-        placeholder="Type your email address"
-      />
+      <TextInputRN style={styles.textInput} placeholder={props.placeholder} />
     </View>
   );
 };
