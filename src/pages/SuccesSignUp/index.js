@@ -4,7 +4,7 @@ import {IlSuccessSignUp} from '../../assets/Ilustration';
 import {Button, Gap} from '../../components';
 import {colors, fonts} from '../../utils';
 
-const SuccesSignUp = () => {
+const SuccesSignUp = props => {
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
       <View style={styles.page}>
@@ -16,7 +16,10 @@ const SuccesSignUp = () => {
         <Text style={styles.subTitle}>some foods as a self-reward</Text>
         <Gap height={30} />
         <View style={styles.succesButton}>
-          <Button text="Find Foods" />
+          <Button
+            text="Find Foods"
+            onPress={() => props.navigation.replace('MainApp')}
+          />
         </View>
       </View>
     </ScrollView>
